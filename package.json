@@ -1,6 +1,6 @@
 {
   "name": "i18next-flatten-resource-store-loader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/flibustier7seas/i18nex-flatten-resource-store-loader/issues"
   },
-  "homepage": "https://github.com/flibustier7seas/i18nex-flatten-resource-store-loader#readme"
+  "homepage": "https://github.com/flibustier7seas/i18nex-flatten-resource-store-loader#readme",
+  "devDependencies": {
+    "flat": "^2.0.1"
+  }
 }

@@ -22090,13 +22090,25 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _locales = __webpack_require__(/*! ../../../locales */ 180);
+	var _reactIntl = __webpack_require__(/*! react-intl */ 180);
+	
+	var _en = __webpack_require__(/*! react-intl/locale-data/en */ 203);
+	
+	var _en2 = _interopRequireDefault(_en);
+	
+	var _ru = __webpack_require__(/*! react-intl/locale-data/ru */ 204);
+	
+	var _ru2 = _interopRequireDefault(_ru);
+	
+	var _locales = __webpack_require__(/*! ../../../locales */ 205);
 	
 	var _locales2 = _interopRequireDefault(_locales);
 	
-	var _reactIntl = __webpack_require__(/*! react-intl */ 181);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+	
+	(0, _reactIntl.addLocaleData)([].concat(_toConsumableArray(_en2.default), _toConsumableArray(_ru2.default)));
 	
 	function Application() {
 	    return _react2.default.createElement(
@@ -22112,17 +22124,6 @@
 
 /***/ },
 /* 180 */
-/*!**************************!*\
-  !*** ./locales/index.js ***!
-  \**************************/
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	module.exports = { "en": { "application.helloWorld": "Hello World" }, "ru": { "application.helloWorld": "Привет Мир" } };
-
-/***/ },
-/* 181 */
 /*!***********************************!*\
   !*** ./~/react-intl/lib/index.js ***!
   \***********************************/
@@ -22144,13 +22145,13 @@
 	    return ex && (typeof ex === 'undefined' ? 'undefined' : _typeof2(ex)) === 'object' && 'default' in ex ? ex['default'] : ex;
 	}
 	
-	var allLocaleData = _interopDefault(__webpack_require__(/*! ../locale-data/index.js */ 182));
-	var IntlMessageFormat = _interopDefault(__webpack_require__(/*! intl-messageformat */ 183));
-	var IntlRelativeFormat = _interopDefault(__webpack_require__(/*! intl-relativeformat */ 193));
+	var allLocaleData = _interopDefault(__webpack_require__(/*! ../locale-data/index.js */ 181));
+	var IntlMessageFormat = _interopDefault(__webpack_require__(/*! intl-messageformat */ 182));
+	var IntlRelativeFormat = _interopDefault(__webpack_require__(/*! intl-relativeformat */ 192));
 	var React = __webpack_require__(/*! react */ 1);
 	var React__default = _interopDefault(React);
-	var invariant = _interopDefault(__webpack_require__(/*! invariant */ 200));
-	var memoizeIntlConstructor = _interopDefault(__webpack_require__(/*! intl-format-cache */ 201));
+	var invariant = _interopDefault(__webpack_require__(/*! invariant */ 199));
+	var memoizeIntlConstructor = _interopDefault(__webpack_require__(/*! intl-format-cache */ 200));
 	
 	// GENERATED FILE
 	var defaultLocaleData = { "locale": "en", "pluralRuleFunction": function pluralRuleFunction(n, ord) {
@@ -24195,7 +24196,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
-/* 182 */
+/* 181 */
 /*!*****************************************!*\
   !*** ../locale-data/index.js (ignored) ***!
   \*****************************************/
@@ -24204,7 +24205,7 @@
 	/* (ignored) */
 
 /***/ },
-/* 183 */
+/* 182 */
 /*!***************************************!*\
   !*** ./~/intl-messageformat/index.js ***!
   \***************************************/
@@ -24214,11 +24215,11 @@
 	
 	'use strict';
 	
-	var IntlMessageFormat = __webpack_require__(/*! ./lib/main */ 184)['default'];
+	var IntlMessageFormat = __webpack_require__(/*! ./lib/main */ 183)['default'];
 	
 	// Add all locale data to `IntlMessageFormat`. This module will be ignored when
 	// bundling for the browser with Browserify/Webpack.
-	__webpack_require__(/*! ./lib/locales */ 192);
+	__webpack_require__(/*! ./lib/locales */ 191);
 	
 	// Re-export `IntlMessageFormat` as the CommonJS default exports with all the
 	// locale data registered, and with English set as the default locale. Define
@@ -24227,7 +24228,7 @@
 	exports['default'] = exports;
 
 /***/ },
-/* 184 */
+/* 183 */
 /*!******************************************!*\
   !*** ./~/intl-messageformat/lib/main.js ***!
   \******************************************/
@@ -24237,8 +24238,8 @@
 	
 	"use strict";
 	
-	var src$core$$ = __webpack_require__(/*! ./core */ 185),
-	    src$en$$ = __webpack_require__(/*! ./en */ 191);
+	var src$core$$ = __webpack_require__(/*! ./core */ 184),
+	    src$en$$ = __webpack_require__(/*! ./en */ 190);
 	
 	src$core$$["default"].__addLocaleData(src$en$$["default"]);
 	src$core$$["default"].defaultLocale = 'en';
@@ -24248,7 +24249,7 @@
 	//# sourceMappingURL=main.js.map
 
 /***/ },
-/* 185 */
+/* 184 */
 /*!******************************************!*\
   !*** ./~/intl-messageformat/lib/core.js ***!
   \******************************************/
@@ -24264,10 +24265,10 @@
 	
 	"use strict";
 	
-	var src$utils$$ = __webpack_require__(/*! ./utils */ 186),
-	    src$es5$$ = __webpack_require__(/*! ./es5 */ 187),
-	    src$compiler$$ = __webpack_require__(/*! ./compiler */ 188),
-	    intl$messageformat$parser$$ = __webpack_require__(/*! intl-messageformat-parser */ 189);
+	var src$utils$$ = __webpack_require__(/*! ./utils */ 185),
+	    src$es5$$ = __webpack_require__(/*! ./es5 */ 186),
+	    src$compiler$$ = __webpack_require__(/*! ./compiler */ 187),
+	    intl$messageformat$parser$$ = __webpack_require__(/*! intl-messageformat-parser */ 188);
 	exports["default"] = MessageFormat;
 	
 	// -- MessageFormat --------------------------------------------------------
@@ -24521,7 +24522,7 @@
 	//# sourceMappingURL=core.js.map
 
 /***/ },
-/* 186 */
+/* 185 */
 /*!*******************************************!*\
   !*** ./~/intl-messageformat/lib/utils.js ***!
   \*******************************************/
@@ -24567,7 +24568,7 @@
 	//# sourceMappingURL=utils.js.map
 
 /***/ },
-/* 187 */
+/* 186 */
 /*!*****************************************!*\
   !*** ./~/intl-messageformat/lib/es5.js ***!
   \*****************************************/
@@ -24583,7 +24584,7 @@
 	
 	"use strict";
 	
-	var src$utils$$ = __webpack_require__(/*! ./utils */ 186);
+	var src$utils$$ = __webpack_require__(/*! ./utils */ 185);
 	
 	// Purposely using the same implementation as the Intl.js `Intl` polyfill.
 	// Copyright 2013 Andy Earnshaw, MIT License
@@ -24627,7 +24628,7 @@
 	//# sourceMappingURL=es5.js.map
 
 /***/ },
-/* 188 */
+/* 187 */
 /*!**********************************************!*\
   !*** ./~/intl-messageformat/lib/compiler.js ***!
   \**********************************************/
@@ -24836,7 +24837,7 @@
 	//# sourceMappingURL=compiler.js.map
 
 /***/ },
-/* 189 */
+/* 188 */
 /*!**********************************************!*\
   !*** ./~/intl-messageformat-parser/index.js ***!
   \**********************************************/
@@ -24844,11 +24845,11 @@
 
 	'use strict';
 	
-	exports = module.exports = __webpack_require__(/*! ./lib/parser */ 190)['default'];
+	exports = module.exports = __webpack_require__(/*! ./lib/parser */ 189)['default'];
 	exports['default'] = exports;
 
 /***/ },
-/* 190 */
+/* 189 */
 /*!***************************************************!*\
   !*** ./~/intl-messageformat-parser/lib/parser.js ***!
   \***************************************************/
@@ -26282,7 +26283,7 @@
 	//# sourceMappingURL=parser.js.map
 
 /***/ },
-/* 191 */
+/* 190 */
 /*!****************************************!*\
   !*** ./~/intl-messageformat/lib/en.js ***!
   \****************************************/
@@ -26302,7 +26303,7 @@
 	//# sourceMappingURL=en.js.map
 
 /***/ },
-/* 192 */
+/* 191 */
 /*!*******************************!*\
   !*** ./lib/locales (ignored) ***!
   \*******************************/
@@ -26311,7 +26312,7 @@
 	/* (ignored) */
 
 /***/ },
-/* 193 */
+/* 192 */
 /*!****************************************!*\
   !*** ./~/intl-relativeformat/index.js ***!
   \****************************************/
@@ -26321,11 +26322,11 @@
 	
 	'use strict';
 	
-	var IntlRelativeFormat = __webpack_require__(/*! ./lib/main */ 194)['default'];
+	var IntlRelativeFormat = __webpack_require__(/*! ./lib/main */ 193)['default'];
 	
 	// Add all locale data to `IntlRelativeFormat`. This module will be ignored when
 	// bundling for the browser with Browserify/Webpack.
-	__webpack_require__(/*! ./lib/locales */ 199);
+	__webpack_require__(/*! ./lib/locales */ 198);
 	
 	// Re-export `IntlRelativeFormat` as the CommonJS default exports with all the
 	// locale data registered, and with English set as the default locale. Define
@@ -26334,7 +26335,7 @@
 	exports['default'] = exports;
 
 /***/ },
-/* 194 */
+/* 193 */
 /*!*******************************************!*\
   !*** ./~/intl-relativeformat/lib/main.js ***!
   \*******************************************/
@@ -26344,8 +26345,8 @@
 	
 	"use strict";
 	
-	var src$core$$ = __webpack_require__(/*! ./core */ 195),
-	    src$en$$ = __webpack_require__(/*! ./en */ 198);
+	var src$core$$ = __webpack_require__(/*! ./core */ 194),
+	    src$en$$ = __webpack_require__(/*! ./en */ 197);
 	
 	src$core$$["default"].__addLocaleData(src$en$$["default"]);
 	src$core$$["default"].defaultLocale = 'en';
@@ -26355,7 +26356,7 @@
 	//# sourceMappingURL=main.js.map
 
 /***/ },
-/* 195 */
+/* 194 */
 /*!*******************************************!*\
   !*** ./~/intl-relativeformat/lib/core.js ***!
   \*******************************************/
@@ -26371,9 +26372,9 @@
 	
 	"use strict";
 	
-	var intl$messageformat$$ = __webpack_require__(/*! intl-messageformat */ 183),
-	    src$diff$$ = __webpack_require__(/*! ./diff */ 196),
-	    src$es5$$ = __webpack_require__(/*! ./es5 */ 197);
+	var intl$messageformat$$ = __webpack_require__(/*! intl-messageformat */ 182),
+	    src$diff$$ = __webpack_require__(/*! ./diff */ 195),
+	    src$es5$$ = __webpack_require__(/*! ./es5 */ 196);
 	exports["default"] = RelativeFormat;
 	
 	// -----------------------------------------------------------------------------
@@ -26636,7 +26637,7 @@
 	//# sourceMappingURL=core.js.map
 
 /***/ },
-/* 196 */
+/* 195 */
 /*!*******************************************!*\
   !*** ./~/intl-relativeformat/lib/diff.js ***!
   \*******************************************/
@@ -26690,7 +26691,7 @@
 	//# sourceMappingURL=diff.js.map
 
 /***/ },
-/* 197 */
+/* 196 */
 /*!******************************************!*\
   !*** ./~/intl-relativeformat/lib/es5.js ***!
   \******************************************/
@@ -26775,7 +26776,7 @@
 	//# sourceMappingURL=es5.js.map
 
 /***/ },
-/* 198 */
+/* 197 */
 /*!*****************************************!*\
   !*** ./~/intl-relativeformat/lib/en.js ***!
   \*****************************************/
@@ -26795,7 +26796,7 @@
 	//# sourceMappingURL=en.js.map
 
 /***/ },
-/* 199 */
+/* 198 */
 /*!*******************************!*\
   !*** ./lib/locales (ignored) ***!
   \*******************************/
@@ -26804,7 +26805,7 @@
 	/* (ignored) */
 
 /***/ },
-/* 200 */
+/* 199 */
 /*!********************************!*\
   !*** ./~/invariant/browser.js ***!
   \********************************/
@@ -26861,7 +26862,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../process/browser.js */ 3)))
 
 /***/ },
-/* 201 */
+/* 200 */
 /*!**************************************!*\
   !*** ./~/intl-format-cache/index.js ***!
   \**************************************/
@@ -26869,11 +26870,11 @@
 
 	'use strict';
 	
-	exports = module.exports = __webpack_require__(/*! ./lib/memoizer */ 202)['default'];
+	exports = module.exports = __webpack_require__(/*! ./lib/memoizer */ 201)['default'];
 	exports['default'] = exports;
 
 /***/ },
-/* 202 */
+/* 201 */
 /*!*********************************************!*\
   !*** ./~/intl-format-cache/lib/memoizer.js ***!
   \*********************************************/
@@ -26883,7 +26884,7 @@
 	
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 	
-	var src$es5$$ = __webpack_require__(/*! ./es5 */ 203);
+	var src$es5$$ = __webpack_require__(/*! ./es5 */ 202);
 	exports["default"] = createFormatCache;
 	
 	// -----------------------------------------------------------------------------
@@ -26961,7 +26962,7 @@
 	//# sourceMappingURL=memoizer.js.map
 
 /***/ },
-/* 203 */
+/* 202 */
 /*!****************************************!*\
   !*** ./~/intl-format-cache/lib/es5.js ***!
   \****************************************/
@@ -27045,6 +27046,69 @@
 	exports.bind = bind, exports.defineProperty = defineProperty, exports.objCreate = objCreate;
 	
 	//# sourceMappingURL=es5.js.map
+
+/***/ },
+/* 203 */
+/*!****************************************!*\
+  !*** ./~/react-intl/locale-data/en.js ***!
+  \****************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;"use strict";
+	
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+	
+	!function (e, a) {
+	  "object" == ( false ? "undefined" : _typeof(exports)) && "undefined" != typeof module ? module.exports = a() :  true ? !(__WEBPACK_AMD_DEFINE_FACTORY__ = (a), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : (e.ReactIntlLocaleData = e.ReactIntlLocaleData || {}, e.ReactIntlLocaleData.en = a());
+	}(undefined, function () {
+	  "use strict";
+	  var e = [{ locale: "en", pluralRuleFunction: function pluralRuleFunction(e, a) {
+	      var n = String(e).split("."),
+	          l = !n[1],
+	          o = Number(n[0]) == e,
+	          t = o && n[0].slice(-1),
+	          r = o && n[0].slice(-2);return a ? 1 == t && 11 != r ? "one" : 2 == t && 12 != r ? "two" : 3 == t && 13 != r ? "few" : "other" : 1 == e && l ? "one" : "other";
+	    }, fields: { year: { displayName: "year", relative: { 0: "this year", 1: "next year", "-1": "last year" }, relativeTime: { future: { one: "in {0} year", other: "in {0} years" }, past: { one: "{0} year ago", other: "{0} years ago" } } }, month: { displayName: "month", relative: { 0: "this month", 1: "next month", "-1": "last month" }, relativeTime: { future: { one: "in {0} month", other: "in {0} months" }, past: { one: "{0} month ago", other: "{0} months ago" } } }, day: { displayName: "day", relative: { 0: "today", 1: "tomorrow", "-1": "yesterday" }, relativeTime: { future: { one: "in {0} day", other: "in {0} days" }, past: { one: "{0} day ago", other: "{0} days ago" } } }, hour: { displayName: "hour", relativeTime: { future: { one: "in {0} hour", other: "in {0} hours" }, past: { one: "{0} hour ago", other: "{0} hours ago" } } }, minute: { displayName: "minute", relativeTime: { future: { one: "in {0} minute", other: "in {0} minutes" }, past: { one: "{0} minute ago", other: "{0} minutes ago" } } }, second: { displayName: "second", relative: { 0: "now" }, relativeTime: { future: { one: "in {0} second", other: "in {0} seconds" }, past: { one: "{0} second ago", other: "{0} seconds ago" } } } } }, { locale: "en-001", parentLocale: "en" }, { locale: "en-150", parentLocale: "en-001" }, { locale: "en-AG", parentLocale: "en-001" }, { locale: "en-AI", parentLocale: "en-001" }, { locale: "en-AS", parentLocale: "en" }, { locale: "en-AT", parentLocale: "en-150" }, { locale: "en-AU", parentLocale: "en-001" }, { locale: "en-BB", parentLocale: "en-001" }, { locale: "en-BE", parentLocale: "en-001" }, { locale: "en-BI", parentLocale: "en" }, { locale: "en-BM", parentLocale: "en-001" }, { locale: "en-BS", parentLocale: "en-001" }, { locale: "en-BW", parentLocale: "en-001" }, { locale: "en-BZ", parentLocale: "en-001" }, { locale: "en-CA", parentLocale: "en-001" }, { locale: "en-CC", parentLocale: "en-001" }, { locale: "en-CH", parentLocale: "en-150" }, { locale: "en-CK", parentLocale: "en-001" }, { locale: "en-CM", parentLocale: "en-001" }, { locale: "en-CX", parentLocale: "en-001" }, { locale: "en-CY", parentLocale: "en-001" }, { locale: "en-DE", parentLocale: "en-150" }, { locale: "en-DG", parentLocale: "en-001" }, { locale: "en-DK", parentLocale: "en-150" }, { locale: "en-DM", parentLocale: "en-001" }, { locale: "en-Dsrt", pluralRuleFunction: function pluralRuleFunction(e, a) {
+	      return "other";
+	    }, fields: { year: { displayName: "Year", relative: { 0: "this year", 1: "next year", "-1": "last year" }, relativeTime: { future: { other: "+{0} y" }, past: { other: "-{0} y" } } }, month: { displayName: "Month", relative: { 0: "this month", 1: "next month", "-1": "last month" }, relativeTime: { future: { other: "+{0} m" }, past: { other: "-{0} m" } } }, day: { displayName: "Day", relative: { 0: "today", 1: "tomorrow", "-1": "yesterday" }, relativeTime: { future: { other: "+{0} d" }, past: { other: "-{0} d" } } }, hour: { displayName: "Hour", relativeTime: { future: { other: "+{0} h" }, past: { other: "-{0} h" } } }, minute: { displayName: "Minute", relativeTime: { future: { other: "+{0} min" }, past: { other: "-{0} min" } } }, second: { displayName: "Second", relative: { 0: "now" }, relativeTime: { future: { other: "+{0} s" }, past: { other: "-{0} s" } } } } }, { locale: "en-ER", parentLocale: "en-001" }, { locale: "en-FI", parentLocale: "en-150" }, { locale: "en-FJ", parentLocale: "en-001" }, { locale: "en-FK", parentLocale: "en-001" }, { locale: "en-FM", parentLocale: "en-001" }, { locale: "en-GB", parentLocale: "en-001" }, { locale: "en-GD", parentLocale: "en-001" }, { locale: "en-GG", parentLocale: "en-001" }, { locale: "en-GH", parentLocale: "en-001" }, { locale: "en-GI", parentLocale: "en-001" }, { locale: "en-GM", parentLocale: "en-001" }, { locale: "en-GU", parentLocale: "en" }, { locale: "en-GY", parentLocale: "en-001" }, { locale: "en-HK", parentLocale: "en-001" }, { locale: "en-IE", parentLocale: "en-001" }, { locale: "en-IL", parentLocale: "en-001" }, { locale: "en-IM", parentLocale: "en-001" }, { locale: "en-IN", parentLocale: "en-001" }, { locale: "en-IO", parentLocale: "en-001" }, { locale: "en-JE", parentLocale: "en-001" }, { locale: "en-JM", parentLocale: "en-001" }, { locale: "en-KE", parentLocale: "en-001" }, { locale: "en-KI", parentLocale: "en-001" }, { locale: "en-KN", parentLocale: "en-001" }, { locale: "en-KY", parentLocale: "en-001" }, { locale: "en-LC", parentLocale: "en-001" }, { locale: "en-LR", parentLocale: "en-001" }, { locale: "en-LS", parentLocale: "en-001" }, { locale: "en-MG", parentLocale: "en-001" }, { locale: "en-MH", parentLocale: "en" }, { locale: "en-MO", parentLocale: "en-001" }, { locale: "en-MP", parentLocale: "en" }, { locale: "en-MS", parentLocale: "en-001" }, { locale: "en-MT", parentLocale: "en-001" }, { locale: "en-MU", parentLocale: "en-001" }, { locale: "en-MW", parentLocale: "en-001" }, { locale: "en-MY", parentLocale: "en-001" }, { locale: "en-NA", parentLocale: "en-001" }, { locale: "en-NF", parentLocale: "en-001" }, { locale: "en-NG", parentLocale: "en-001" }, { locale: "en-NL", parentLocale: "en-150" }, { locale: "en-NR", parentLocale: "en-001" }, { locale: "en-NU", parentLocale: "en-001" }, { locale: "en-NZ", parentLocale: "en-001" }, { locale: "en-PG", parentLocale: "en-001" }, { locale: "en-PH", parentLocale: "en-001" }, { locale: "en-PK", parentLocale: "en-001" }, { locale: "en-PN", parentLocale: "en-001" }, { locale: "en-PR", parentLocale: "en" }, { locale: "en-PW", parentLocale: "en-001" }, { locale: "en-RW", parentLocale: "en-001" }, { locale: "en-SB", parentLocale: "en-001" }, { locale: "en-SC", parentLocale: "en-001" }, { locale: "en-SD", parentLocale: "en-001" }, { locale: "en-SE", parentLocale: "en-150" }, { locale: "en-SG", parentLocale: "en-001" }, { locale: "en-SH", parentLocale: "en-001" }, { locale: "en-SI", parentLocale: "en-150" }, { locale: "en-SL", parentLocale: "en-001" }, { locale: "en-SS", parentLocale: "en-001" }, { locale: "en-SX", parentLocale: "en-001" }, { locale: "en-SZ", parentLocale: "en-001" }, { locale: "en-Shaw", pluralRuleFunction: function pluralRuleFunction(e, a) {
+	      return "other";
+	    }, fields: { year: { displayName: "Year", relative: { 0: "this year", 1: "next year", "-1": "last year" }, relativeTime: { future: { other: "+{0} y" }, past: { other: "-{0} y" } } }, month: { displayName: "Month", relative: { 0: "this month", 1: "next month", "-1": "last month" }, relativeTime: { future: { other: "+{0} m" }, past: { other: "-{0} m" } } }, day: { displayName: "Day", relative: { 0: "today", 1: "tomorrow", "-1": "yesterday" }, relativeTime: { future: { other: "+{0} d" }, past: { other: "-{0} d" } } }, hour: { displayName: "Hour", relativeTime: { future: { other: "+{0} h" }, past: { other: "-{0} h" } } }, minute: { displayName: "Minute", relativeTime: { future: { other: "+{0} min" }, past: { other: "-{0} min" } } }, second: { displayName: "Second", relative: { 0: "now" }, relativeTime: { future: { other: "+{0} s" }, past: { other: "-{0} s" } } } } }, { locale: "en-TC", parentLocale: "en-001" }, { locale: "en-TK", parentLocale: "en-001" }, { locale: "en-TO", parentLocale: "en-001" }, { locale: "en-TT", parentLocale: "en-001" }, { locale: "en-TV", parentLocale: "en-001" }, { locale: "en-TZ", parentLocale: "en-001" }, { locale: "en-UG", parentLocale: "en-001" }, { locale: "en-UM", parentLocale: "en" }, { locale: "en-US", parentLocale: "en" }, { locale: "en-VC", parentLocale: "en-001" }, { locale: "en-VG", parentLocale: "en-001" }, { locale: "en-VI", parentLocale: "en" }, { locale: "en-VU", parentLocale: "en-001" }, { locale: "en-WS", parentLocale: "en-001" }, { locale: "en-ZA", parentLocale: "en-001" }, { locale: "en-ZM", parentLocale: "en-001" }, { locale: "en-ZW", parentLocale: "en-001" }];return e;
+	});
+
+/***/ },
+/* 204 */
+/*!****************************************!*\
+  !*** ./~/react-intl/locale-data/ru.js ***!
+  \****************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;"use strict";
+	
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+	
+	!function (e, a) {
+	  "object" == ( false ? "undefined" : _typeof(exports)) && "undefined" != typeof module ? module.exports = a() :  true ? !(__WEBPACK_AMD_DEFINE_FACTORY__ = (a), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : (e.ReactIntlLocaleData = e.ReactIntlLocaleData || {}, e.ReactIntlLocaleData.ru = a());
+	}(undefined, function () {
+	  "use strict";
+	  var e = [{ locale: "ru", pluralRuleFunction: function pluralRuleFunction(e, a) {
+	      var t = String(e).split("."),
+	          r = t[0],
+	          o = !t[1],
+	          n = r.slice(-1),
+	          l = r.slice(-2);return a ? "other" : o && 1 == n && 11 != l ? "one" : o && n >= 2 && n <= 4 && (l < 12 || l > 14) ? "few" : o && 0 == n || o && n >= 5 && n <= 9 || o && l >= 11 && l <= 14 ? "many" : "other";
+	    }, fields: { year: { displayName: "год", relative: { 0: "в этом году", 1: "в следующем году", "-1": "в прошлом году" }, relativeTime: { future: { one: "через {0} год", few: "через {0} года", many: "через {0} лет", other: "через {0} года" }, past: { one: "{0} год назад", few: "{0} года назад", many: "{0} лет назад", other: "{0} года назад" } } }, month: { displayName: "месяц", relative: { 0: "в этом месяце", 1: "в следующем месяце", "-1": "в прошлом месяце" }, relativeTime: { future: { one: "через {0} месяц", few: "через {0} месяца", many: "через {0} месяцев", other: "через {0} месяца" }, past: { one: "{0} месяц назад", few: "{0} месяца назад", many: "{0} месяцев назад", other: "{0} месяца назад" } } }, day: { displayName: "день", relative: { 0: "сегодня", 1: "завтра", 2: "послезавтра", "-2": "позавчера", "-1": "вчера" }, relativeTime: { future: { one: "через {0} день", few: "через {0} дня", many: "через {0} дней", other: "через {0} дней" }, past: { one: "{0} день назад", few: "{0} дня назад", many: "{0} дней назад", other: "{0} дня назад" } } }, hour: { displayName: "час", relativeTime: { future: { one: "через {0} час", few: "через {0} часа", many: "через {0} часов", other: "через {0} часа" }, past: { one: "{0} час назад", few: "{0} часа назад", many: "{0} часов назад", other: "{0} часа назад" } } }, minute: { displayName: "минута", relativeTime: { future: { one: "через {0} минуту", few: "через {0} минуты", many: "через {0} минут", other: "через {0} минуты" }, past: { one: "{0} минуту назад", few: "{0} минуты назад", many: "{0} минут назад", other: "{0} минуты назад" } } }, second: { displayName: "секунда", relative: { 0: "сейчас" }, relativeTime: { future: { one: "через {0} секунду", few: "через {0} секунды", many: "через {0} секунд", other: "через {0} секунды" }, past: { one: "{0} секунду назад", few: "{0} секунды назад", many: "{0} секунд назад", other: "{0} секунды назад" } } } } }, { locale: "ru-BY", parentLocale: "ru" }, { locale: "ru-KG", parentLocale: "ru" }, { locale: "ru-KZ", parentLocale: "ru" }, { locale: "ru-MD", parentLocale: "ru" }, { locale: "ru-UA", parentLocale: "ru" }];return e;
+	});
+
+/***/ },
+/* 205 */
+/*!**************************!*\
+  !*** ./locales/index.js ***!
+  \**************************/
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	module.exports = { "en": { "application.helloWorld": "Hello World" }, "ru": { "application.helloWorld": "Привет Мир" } };
 
 /***/ }
 /******/ ]);

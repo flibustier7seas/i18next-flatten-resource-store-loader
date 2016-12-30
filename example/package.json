@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack -d",
+    "build:watch": "webpack -d -w"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +24,6 @@
     "eslint": "^3.12.2",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-react": "^6.8.0",
-    "i18next-flatten-resource-store-loader": "0.0.4"
+    "i18next-flatten-resource-store-loader": "0.0.5"
   }
 }

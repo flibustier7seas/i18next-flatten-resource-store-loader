@@ -1,6 +1,6 @@
 {
   "name": "i18next-flatten-resource-store-loader",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,18 +18,17 @@
     "url": "https://github.com/flibustier7seas/i18nex-flatten-resource-store-loader/issues"
   },
   "keywords": [
-    "webpack",
+    "loader",
     "i18next",
+    "flat",
     "static",
     "resource",
-    "loader",
-    "flat"
+    "webpack"
   ],
   "homepage": "https://github.com/flibustier7seas/i18nex-flatten-resource-store-loader#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "eslint": "^3.12.2",
-    "flat": "^2.0.1",
     "mocha": "^3.2.0"
   },
   "dependencies": {

@@ -1,5 +1,45 @@
 # i18next-flatten-resource-store-loader
 
+## Description
+
+Webpack loader designed for convert files that look like:
+
+```
+└── locales
+    ├── en
+    │   └──  application.json
+    │      
+    ├── ru
+    │   └── application.json
+    │
+    └── index.js
+    
+// File: locales/en/application.json
+{
+    "helloWorld": "Hello World"
+}
+
+// File: locales/ru/application.json
+{
+    "helloWorld": "Привет Мир"
+}
+```
+
+to this:
+
+```
+{
+    "en": {
+        "application.helloWorld": "Hello World",
+    },
+    "ru": {
+        "application.helloWorld": "Привет Мир",
+    },
+};
+```
+
+## Installation
+
 `npm install i18next-flatten-resource-store-loader`
 
 ## Usage
@@ -23,19 +63,6 @@ File structure:
     │   └── index.js
     │
     └── webpack.config.js
-```
-
-```javascript
-// File: locales/en/application.json
-{
-    "helloWorld": "Hello World"
-}
-```
-```javascript
-// File: locales/ru/application.json
-{
-    "helloWorld": "Привет Мир"
-}
 ```
 
 ```javascript

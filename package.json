@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack -d",
+    "build:watch": "webpack -d -w",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -15,8 +17,22 @@
   "bugs": {
     "url": "https://github.com/flibustier7seas/i18nex-flatten-resource-store-loader/issues"
   },
+  "keywords": [
+    "webpack",
+    "i18next",
+    "static",
+    "resource",
+    "loader",
+    "flat"
+  ],
   "homepage": "https://github.com/flibustier7seas/i18nex-flatten-resource-store-loader#readme",
   "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.12.2",
+    "flat": "^2.0.1",
+    "mocha": "^3.2.0"
+  },
+  "dependencies": {
     "flat": "^2.0.1"
   }
 }

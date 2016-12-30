@@ -96,15 +96,6 @@ import React from "react";
 import messages from "../../../locales";
 import { IntlProvider, FormattedMessage } from "react-intl";
 
-// messages = {
-//     "en": {
-//         "application.helloWorld": "Hello World",
-//     },
-//     "ru": {
-//         "application.helloWorld": "Привет Мир",
-//     },
-// };
-
 export default function Application() {
     return (
         <IntlProvider locale="en" messages={messages["en"]}>

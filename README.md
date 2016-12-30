@@ -26,6 +26,19 @@ File structure:
 ```
 
 ```javascript
+// File: locales/en/application.json
+{
+    "helloWorld": "Hello World"
+}
+```
+```javascript
+// File: locales/ru/application.json
+{
+    "helloWorld": "Привет Мир"
+}
+```
+
+```javascript
 // File: webpack.config.js
 module.exports = {
     entry: "./src/index.js",
@@ -55,6 +68,15 @@ module.exports = {
 import React from "react";
 import messages from "../../../locales";
 import { IntlProvider, FormattedMessage } from "react-intl";
+
+// messages = {
+//     "en": {
+//         "application.helloWorld": "Hello World",
+//     },
+//     "ru": {
+//         "application.helloWorld": "Привет Мир",
+//     },
+// };
 
 export default function Application() {
     return (

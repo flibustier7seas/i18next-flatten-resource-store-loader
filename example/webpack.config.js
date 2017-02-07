@@ -1,7 +1,11 @@
 /* eslint-env node */
+var path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: {
+        app: "./src/index",
+    },
 
     output: {
         path: __dirname + "/dist",
@@ -9,18 +13,21 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ["", ".ts", ".tsx", ".js", ".jsx"],
+        modules: [path.resolve(__dirname, "src"), "node_modules"],
+        extensions: [".ts", ".tsx", ".js", ".jsx"],
     },
 
     module: {
-        preLoaders: [{
-            test: /\.jsx?$/,
-            exclude: /node_modules/,
-            loaders: ["eslint"]},
-        ],
-        loaders: [
-            { test: /\.jsx?$/, loader: "babel", query: { presets: ["es2015", "react"] }},        
-            { test: /locales/, loaders: ["i18next-flatten-resource-store"] },
+        rules: [
+            { test: /locales/, loader: "i18next-flatten-resource-store-loader" },
+            { 
+                test: /\.jsx?$/,
+                exclude: [/node_modules/],
+                use: [{
+                    loader: "babel-loader",
+                    options: { presets: ["react"] },                    
+                }],
+            },
         ],
     },
 };

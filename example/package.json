@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "build": "webpack -d",
-    "build:watch": "webpack -d -w"
-  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -24,7 +20,12 @@
     "eslint": "^3.12.2",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-react": "^6.8.0",
-    "i18next-flatten-resource-store-loader": "0.1.0",
-    "webpack": "^2.2.0"
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack -d",
+    "build:watch": "webpack -d -w"
   }
 }

@@ -4,8 +4,12 @@ var fs = require("fs");
 var path = require("path");
 var flatten = require("flat");
 
+// https://github.com/webpack/docs/wiki/how-to-write-a-loader
 module.exports = function () {
+    this.cacheable && this.cacheable();
+
     var baseDirectory = path.dirname(this.resource);
+    this.addContextDependency(baseDirectory);
 
     var languageDefiningDirectories = fs.readdirSync(baseDirectory).filter(function (file) {
         return fs.statSync(path.join(baseDirectory, file)).isDirectory();
